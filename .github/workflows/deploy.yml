@@ -49,4 +49,4 @@ jobs:
         script: |
           docker stop af
           docker rm --force af
-          docker run -d -p 8080:8080 -e string_conexao=${{ secrets.CONECTION_STRING }} --name af --network=rede marcelovta/af-ci:${{ github.sha }}
+          docker run -d -p 8080:8080 -e string_conexao=${{ secrets.CONNECTION_STRING }} --name af --network=rede marcelovta/af-ci:${{ github.sha }}

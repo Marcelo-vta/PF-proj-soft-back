@@ -1,13 +1,13 @@
-package br.insper.musica;
+package br.insper.tarefa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class 	MusicaApplication {
+public class TarefaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MusicaApplication.class, args);
+		SpringApplication.run(TarefaApplication.class, args);
 	}
 
 }

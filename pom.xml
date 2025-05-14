@@ -8,10 +8,10 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.edu.insper</groupId>
-	<artifactId>musica</artifactId>
+	<groupId>br.insper</groupId>
+	<artifactId>af</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>musica</name>
+	<name>af</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

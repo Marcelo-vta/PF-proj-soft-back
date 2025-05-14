@@ -73,25 +73,26 @@
 				<version>0.8.12</version>
 				<executions>
 					<execution>
-						<id>pre-test</id>
+						<id>prepare-agent</id>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 						<configuration>
+							<destFile>${project.build.directory}/jacoco.exec</destFile>
 							<propertyName>jacocoArgLine</propertyName>
-							<destFile>${project.test.result.directory}/jacoco/jacoco.exec</destFile>
+							<append>true</append>
 						</configuration>
 					</execution>
-
 					<execution>
-						<id>post-test</id>
-						<phase>test</phase>
+						<id>report</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
 						<configuration>
-							<dataFile>${project.test.result.directory}/jacoco/jacoco.exec</dataFile>
-							<outputDirectory>${project.test.result.directory}/jacoco</outputDirectory>
+							<dataFile>${project.build.directory}/jacoco.exec</dataFile>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+							<output>csv</output>
 						</configuration>
 					</execution>
 				</executions>
